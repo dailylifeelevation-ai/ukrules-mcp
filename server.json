@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.dailylifeelevation-ai/ukrules-mcp",
+  "title": "UK Rules & Rates",
+  "description": "Sourced, date-aware UK tax and payroll rates, deadlines and UK business checks, with GOV.UK sources.",
+  "version": "0.1.0",
+  "websiteUrl": "https://ukrules.dailylifeelevation.workers.dev/",
+  "repository": { "url": "https://github.com/dailylifeelevation-ai/ukrules-mcp", "source": "github" },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ukrules.dailylifeelevation.workers.dev/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. 'Bearer <API key>' from /pricing. Without it, free tools work and paid tools ask for an x402 payment.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
